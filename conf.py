@@ -9,8 +9,8 @@ sys.path.insert(0, os.path.abspath("./_ext"))
 
 # -- Project information -----------------------------------------------------
 
-project = "FEM on Colab"
-copyright = "2021-, Francesco Ballarin (and contributors)"
+project = "FEM on Kaggle"
+copyright = "2022-, Francesco Ballarin (and contributors)"
 author = "Francesco Ballarin (and contributors)"
 
 
@@ -31,7 +31,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 # -- Options for HTML output -------------------------------------------------
-html_title = "FEM on Colab"
+html_title = "FEM on Kaggle"
 
 # The theme to use for HTML and HTML Help pages.
 # From https://github.com/bashtage/sphinx-material
@@ -40,14 +40,14 @@ html_theme = "sphinx_material"
 # Material theme options
 html_theme_options = {
     # Set the name of the project to appear in the navigation.
-    "nav_title": "FEM on Colab",
+    "nav_title": "FEM on Kaggle",
 
     # Set you GA account ID to enable tracking
-    "google_analytics_account": "UA-198305719-1",
+    "google_analytics_account": "UA-251001621-1",
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
-    "base_url": "https://fem-on-colab.github.io/",
+    "base_url": "https://fem-on-kaggle.github.io/",
 
     # Set the color and the accent color
     "theme_color": "#00325c",
@@ -55,8 +55,8 @@ html_theme_options = {
     "color_accent": "unicatt",
 
     # Set the repo location to get a badge with stats
-    "repo_url": "https://github.com/fem-on-colab/fem-on-colab/",
-    "repo_name": "fem-on-colab",
+    "repo_url": "https://github.com/fem-on-kaggle/fem-on-kaggle/",
+    "repo_name": "fem-on-kaggle",
 
     # Visible levels of the global TOC; -1 means unlimited
     "globaltoc_depth": 1,
@@ -66,7 +66,7 @@ html_theme_options = {
     "globaltoc_includehidden": False,
 
     # Path to a touch icon, should be 152x152 or larger.
-    "touch_icon": "images/fem-on-colab-logo.png",
+    "touch_icon": "images/fem-on-kaggle-logo.png",
     "logo_icon": "&#xe069",
 
     # Main menu links

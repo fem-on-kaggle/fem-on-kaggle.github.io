@@ -5,7 +5,7 @@ packages = {
 try:
     import dolfin
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/fenics-install.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/fenics-install.sh" -O "/tmp/fenics-install.sh" && bash "/tmp/fenics-install.sh"
     import dolfin
 """,
         "installation_suffixes": [""],
@@ -24,14 +24,14 @@ except ImportError:
 try:
     import dolfinx
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/fenicsx-install-SUFFIX.sh" -O "/tmp/fenicsx-install.sh" && bash "/tmp/fenicsx-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/fenicsx-install-SUFFIX.sh" -O "/tmp/fenicsx-install.sh" && bash "/tmp/fenicsx-install.sh"
     import dolfinx
 """,
         "installation_suffixes": ["real", "complex"],
         "tests": {
             "dolfinx": "fenicsx/test-dolfinx.ipynb",
-            "multiphenicsx (with plotly)": "https://colab.research.google.com/github/multiphenics/multiphenics.github.io/blob/open-in-colab-multiphenicsx/tutorials/01_block_poisson/tutorial_block_poisson.ipynb",
-            "multiphenicsx (with pyvista)": "https://colab.research.google.com/github/multiphenics/multiphenics.github.io/blob/open-in-colab-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb"
+            "multiphenicsx (with plotly)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/01_block_poisson/tutorial_block_poisson.ipynb",
+            "multiphenicsx (with pyvista)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb"
         },
     },
     "firedrake": {
@@ -40,7 +40,7 @@ except ImportError:
 try:
     import firedrake
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/firedrake-install-SUFFIX.sh" -O "/tmp/firedrake-install.sh" && bash "/tmp/firedrake-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/firedrake-install-SUFFIX.sh" -O "/tmp/firedrake-install.sh" && bash "/tmp/firedrake-install.sh"
     import firedrake
 """,
         "installation_suffixes": ["real", "complex"],
@@ -56,7 +56,7 @@ except ImportError:
 try:
     import gmsh
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/gmsh-install.sh" -O "/tmp/gmsh-install.sh" && bash "/tmp/gmsh-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/gmsh-install.sh" -O "/tmp/gmsh-install.sh" && bash "/tmp/gmsh-install.sh"
     import gmsh
 """,
         "installation_suffixes": [""],
@@ -70,7 +70,7 @@ except ImportError:
 try:
     import ngsolve
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/ngsolve-install.sh" -O "/tmp/ngsolve-install.sh" && bash "/tmp/ngsolve-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/ngsolve-install.sh" -O "/tmp/ngsolve-install.sh" && bash "/tmp/ngsolve-install.sh"
     import ngsolve
 """,
         "installation_suffixes": [""],
@@ -85,7 +85,7 @@ extra_packages = {
     "boost": {
         "title": "Boost",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/boost-install.sh" -O "/tmp/boost-install.sh" && bash "/tmp/boost-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/boost-install.sh" -O "/tmp/boost-install.sh" && bash "/tmp/boost-install.sh"
 """,
         "installation_suffixes": [""],
         "tests": {
@@ -95,7 +95,7 @@ extra_packages = {
     "gcc": {
         "title": "GCC",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/gcc-install.sh" -O "/tmp/gcc-install.sh" && bash "/tmp/gcc-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/gcc-install.sh" -O "/tmp/gcc-install.sh" && bash "/tmp/gcc-install.sh"
 """,
         "installation_suffixes": [""],
         "tests": {
@@ -105,7 +105,7 @@ extra_packages = {
     "h5py": {
         "title": "HDF5 & h5py",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/h5py-install.sh" -O "/tmp/h5py-install.sh" && bash "/tmp/h5py-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/h5py-install.sh" -O "/tmp/h5py-install.sh" && bash "/tmp/h5py-install.sh"
 import h5py
 """,
         "installation_suffixes": [""],
@@ -119,7 +119,7 @@ import h5py
 try:
     import itk
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/itk-install.sh" -O "/tmp/itk-install.sh" && bash "/tmp/itk-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/itk-install.sh" -O "/tmp/itk-install.sh" && bash "/tmp/itk-install.sh"
     import itk
 """,
         "installation_suffixes": [""],
@@ -131,7 +131,7 @@ except ImportError:
     "mock": {
         "title": "Mock package",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/mock-install.sh" -O "/tmp/mock-install.sh" && bash "/tmp/mock-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/mock-install.sh" -O "/tmp/mock-install.sh" && bash "/tmp/mock-install.sh"
 import mock
 """,
         "installation_suffixes": [""],
@@ -145,7 +145,7 @@ import mock
 try:
     import mpi4py
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/mpi4py-install.sh" -O "/tmp/mpi4py-install.sh" && bash "/tmp/mpi4py-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/mpi4py-install.sh" -O "/tmp/mpi4py-install.sh" && bash "/tmp/mpi4py-install.sh"
     import mpi4py
 """,
         "installation_suffixes": [""],
@@ -156,7 +156,7 @@ except ImportError:
     "occ": {
         "title": "Open CASCADE Technology",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/occ-install.sh" -O "/tmp/occ-install.sh" && bash "/tmp/occ-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/occ-install.sh" -O "/tmp/occ-install.sh" && bash "/tmp/occ-install.sh"
 """,
         "installation_suffixes": [""],
         "tests": {
@@ -169,7 +169,7 @@ except ImportError:
 try:
     import petsc4py
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/petsc4py-install-SUFFIX.sh" -O "/tmp/petsc4py-install.sh" && bash "/tmp/petsc4py-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/petsc4py-install-SUFFIX.sh" -O "/tmp/petsc4py-install.sh" && bash "/tmp/petsc4py-install.sh"
     import petsc4py
 """,
         "installation_suffixes": ["real", "complex"],
@@ -180,7 +180,7 @@ except ImportError:
     "pybind11": {
         "title": "pybind11",
         "installation": """
-!wget "https://fem-on-colab.github.io/releases/pybind11-install.sh" -O "/tmp/pybind11-install.sh" && bash "/tmp/pybind11-install.sh"
+!wget "https://fem-on-kaggle.github.io/releases/pybind11-install.sh" -O "/tmp/pybind11-install.sh" && bash "/tmp/pybind11-install.sh"
 import pybind11
 """,
         "installation_suffixes": [""],
@@ -196,7 +196,7 @@ import pybind11
 try:
     import slepc4py
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/slepc4py-install-SUFFIX.sh" -O "/tmp/slepc4py-install.sh" && bash "/tmp/slepc4py-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/slepc4py-install-SUFFIX.sh" -O "/tmp/slepc4py-install.sh" && bash "/tmp/slepc4py-install.sh"
     import slepc4py
 """,
         "installation_suffixes": ["real", "complex"],
@@ -210,7 +210,7 @@ except ImportError:
 try:
     import vtk
 except ImportError:
-    !wget "https://fem-on-colab.github.io/releases/vtk-install.sh" -O "/tmp/vtk-install.sh" && bash "/tmp/vtk-install.sh"
+    !wget "https://fem-on-kaggle.github.io/releases/vtk-install.sh" -O "/tmp/vtk-install.sh" && bash "/tmp/vtk-install.sh"
     import vtk
 """,
         "installation_suffixes": [""],

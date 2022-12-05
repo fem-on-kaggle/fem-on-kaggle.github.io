@@ -17,7 +17,7 @@ class Packages(Directive):
         # Introduction to packages
         intro = f"""
 <p>
-You can install one of the packages provided by <b>FEM on Colab</b> by adding the following cell at the top of your notebook.
+You can install one of the packages provided by <b>FEM on Kaggle</b> by adding the following cell at the top of your notebook.
 </p>
 """
         output.append(nodes.raw(text=intro, format="html"))
@@ -40,7 +40,7 @@ You can install one of the packages provided by <b>FEM on Colab</b> by adding th
 <label for="extra-packages-toggle" class="extra-packages-toggle-title">Package dependencies</label>
 <div class="extra-packages-content">
 <p>
-A complete list of all dependencies is reported below. Users should typically not install any such dependency, since <b>FEM on Colab</b> automatically downloads and installs any required dependency of the aforementioned packages.
+A complete list of all dependencies is reported below. Users should typically not install any such dependency, since <b>FEM on Kaggle</b> automatically downloads and installs any required dependency of the aforementioned packages.
 </p>
 """
         output.append(nodes.raw(text=extra_intro, format="html"))
@@ -102,12 +102,12 @@ A complete list of all dependencies is reported below. Users should typically no
     <ul class="jq-dropdown-menu">
 """
         for (library, url) in libraries_urls.items():
-            if not url.startswith("https://colab.research.google.com"):
-                colab_url = f"https://colab.research.google.com/github/fem-on-colab/fem-on-colab.github.io/blob/gh-pages/tests/{url}"
+            if not url.startswith("https://kaggle.com/kernels/welcome?src="):
+                kaggle_url = f"https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/{url}"
             else:
-                colab_url = url
+                kaggle_url = url
             dropdown += f"""
-        <li><a href="{colab_url}" target="_blank">{cls._library_image(library)} {library}</a></li>
+        <li><a href="{kaggle_url}" target="_blank">{cls._library_image(library)} {library}</a></li>
 """
         dropdown += f"""
     </ul>
@@ -235,24 +235,24 @@ def on_build_finished(app, exc):
 {
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
-  "name": "FEM on Colab",
-  "description": "FEM on Colab is a collection of packages that allows to easily install several finite element libraries on Google Colab. FEM on Colab is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin.",
-  "keywords": "fem-on-colab, Colab, finite element, jupyter",
-  "softwareHelp": "https://fem-on-colab.github.io/",
+  "name": "FEM on Kaggle",
+  "description": "FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab.",
+  "keywords": "fem-on-kaggle, Kaggle, finite element, jupyter",
+  "softwareHelp": "https://fem-on-kaggle.github.io/",
   "operatingSystem": "Linux",
   "applicationCategory": "Simulation",
   "inLanguage": "en",
   "license": "https://opensource.org/licenses/MIT",
-  "url": "https://github.com/fem-on-colab"
+  "url": "https://github.com/fem-on-kaggle"
 }
 </script>
 
-<meta property="og:title" content="FEM on Colab" />
-<meta property="og:description" content="FEM on Colab is a collection of packages that allows to easily install several finite element libraries on Google Colab. FEM on Colab is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin." />
+<meta property="og:title" content="FEM on Kaggle" />
+<meta property="og:description" content="FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab." />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="FEM on Colab" />
-<meta property="og:url" content="https://fem-on-colab.github.io/" />
-<meta property="og:image" content="https://fem-on-colab.github.io/_images/fem-on-colab-logo.png" />
+<meta property="og:site_name" content="FEM on Kaggle" />
+<meta property="og:url" content="https://fem-on-kaggle.github.io/" />
+<meta property="og:image" content="https://fem-on-kaggle.github.io/_images/fem-on-kaggle-logo.png" />
 """
         index = os.path.join(app.outdir, "index.html")
         with open(index, "r") as f:
@@ -283,7 +283,7 @@ def on_build_finished(app, exc):
                     assert package_install not in all_packages_files
                     all_packages_files[package_install] = package_install_git
             for (_, test_notebook_name) in all_packages[package]["tests"].items():
-                if not test_notebook_name.startswith("https://colab.research.google.com"):
+                if not test_notebook_name.startswith("https://kaggle.com/kernels/welcome?src="):
                     test_notebook_git = os.path.join("tests", test_notebook_name)
                     test_notebook = os.path.join(tests_dir, test_notebook_name)
                     assert test_notebook not in all_packages_files
@@ -346,7 +346,7 @@ def create_sitemap(app, exc):
             shell=True)
         # Write robots.txt file
         with open(os.path.join(app.outdir, "robots.txt"), "w") as f:
-            f.write("""Sitemap: https://fem-on-colab.github.io/sitemap.xml
+            f.write("""Sitemap: https://fem-on-kaggle.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
