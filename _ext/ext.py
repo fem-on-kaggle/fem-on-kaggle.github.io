@@ -16,6 +16,30 @@ class Packages(Directive):
         output = list()
         # Introduction to packages
         intro = f"""
+<div class="package-card" style="background-color: #fee57f; box-shadow: 0 4px 8px 0 #fef2bf;">
+  <div class="package-logo">
+    <img src="_static/images/warning.png" style="vertical-align: middle; width: 100px">
+  </div>
+  <div class="package-content">
+    <h3 class="package-title">
+      Enable Internet Access
+    </h3>
+    <b>FEM on Kaggle</b> installation scripts require internet access. <a href="https://www.kaggle.com/docs/notebooks#modifying-a-notebook-specific-environment">Enabling it</a> may require the user to be logged in, and their account to be associated to a verified mobile phone number.
+  </div>
+</div>
+
+<div class="package-card" style="background-color: #fee57f; box-shadow: 0 4px 8px 0 #fef2bf;">
+  <div class="package-logo">
+    <img src="_static/images/warning.png" style="vertical-align: middle; width: 100px">
+  </div>
+  <div class="package-content">
+    <h3 class="package-title">
+      Accelerators
+    </h3>
+    Packages supported by <b>FEM on Kaggle</b> are built for CPU containers. Containers with GPU and TPU accelerators may work as well, but are untested and not officially targeted by this project.
+  </div>
+</div>
+
 <p>
 You can install one of the packages provided by <b>FEM on Kaggle</b> by adding the following cell at the top of your notebook.
 </p>
