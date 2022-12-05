@@ -1,0 +1,5 @@
+Sitemap: https://fem-on-kaggle.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
+Allow: /
