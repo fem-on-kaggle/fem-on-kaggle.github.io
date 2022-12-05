@@ -19,7 +19,7 @@ jobs:
           upstream-repository: fem-on-colab/fem-on-colab.github.io
           upstream-ref: main
           target-ref: ${{ github.ref_name }}
-          file-patterns: '*.* **/*.*'
+          file-patterns: '* **/*'
           commit-message-prefix: Sync with FEM on Colab website
           token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
       - name: Warn if scheduled workflow is about to be disabled
