@@ -16,7 +16,7 @@ jobs:
     - name: Determine which token to use when cloning website repository on stats branch
       id: token_gh_pages
       run: |
-        if [[ "${GITHUB_REPOSITORY}" == "fem-on-colab/fem-on-colab.github.io" ]]; then
+        if [[ "${GITHUB_REPOSITORY}" == "fem-on-kaggle/fem-on-kaggle.github.io" ]]; then
           echo "token=${{ secrets.GITHUB_TOKEN }}" >> ${GITHUB_OUTPUT}
         else
           echo "token=${{ github.token }}" >> ${GITHUB_OUTPUT}
@@ -44,7 +44,7 @@ jobs:
         python3 stats.py
         popd
     - name: Deploy to GitHub branch
-      if: github.repository == 'fem-on-colab/fem-on-colab.github.io' && github.ref == 'refs/heads/main'
+      if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main'
       run: |
         SHA_SHORT=$(git rev-parse --short HEAD)
         pushd _build/stats
@@ -57,7 +57,7 @@ jobs:
         popd
       shell: bash
     - name: Warn if scheduled workflow is about to be disabled
-      if: github.repository == 'fem-on-colab/fem-on-colab.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
+      if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
       uses: fem-on-colab/warn-workflow-about-to-be-disabled-action@main
       with:
         workflow-filename: stats.yml
