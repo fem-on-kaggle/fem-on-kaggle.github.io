@@ -1,7 +1,7 @@
 id,package,version,asset,count_2022_12_05,count_2022_12_06
 vtk_20221205-090348_9ee57a2_vtk-install.tar.gz,vtk,20221205-090348 9ee57a2,vtk-install.tar.gz,5.0,30
 itk_20221205-092449_9ee57a2_itk-install.tar.gz,itk,20221205-092449 9ee57a2,itk-install.tar.gz,2.0,18
-gcc_20221205-081145_9ee57a2_gcc-install.tar.gz,gcc,20221205-081145 9ee57a2,gcc-install.tar.gz,14.0,89
+gcc_20221205-081145_9ee57a2_gcc-install.tar.gz,gcc,20221205-081145 9ee57a2,gcc-install.tar.gz,14.0,92
 gcc_20221205-072144_62376fa_gcc-install.tar.gz,gcc,20221205-072144 62376fa,gcc-install.tar.gz,8.0,8
 boost_20221205-090304_9ee57a2_boost-install.tar.gz,boost,20221205-090304 9ee57a2,boost-install.tar.gz,2.0,33
 gcc_20221205-060510_afee1ad_gcc-install.tar.gz,gcc,20221205-060510 afee1ad,gcc-install.tar.gz,1.0,1
@@ -82,16 +82,17 @@ gcc_20221103-130855_d111ea3_gcc-install.tar-ffebf62bc40c0bfe4662f6bde5159097.gz,
 boost_20221103-155708_267be4a_boost-install.tar.gz,boost,20221103-155708 267be4a,boost-install.tar.gz,0.0,0
 slepc4py_20221205-130116_9ee57a2_real_slepc4py-install.tar.gz,slepc4py,20221205-130116 9ee57a2 real,slepc4py-install.tar.gz,0.0,22
 slepc4py_20221205-125415_9ee57a2_complex_slepc4py-install.tar.gz,slepc4py,20221205-125415 9ee57a2 complex,slepc4py-install.tar.gz,0.0,13
-pybind11_20221205-111547_9ee57a2_pybind11-install.tar.gz,pybind11,20221205-111547 9ee57a2,pybind11-install.tar.gz,0.0,42
-petsc4py_20221205-114436_9ee57a2_real_petsc4py-install.tar.gz,petsc4py,20221205-114436 9ee57a2 real,petsc4py-install.tar.gz,0.0,32
+pybind11_20221205-111547_9ee57a2_pybind11-install.tar.gz,pybind11,20221205-111547 9ee57a2,pybind11-install.tar.gz,0.0,45
+petsc4py_20221205-114436_9ee57a2_real_petsc4py-install.tar.gz,petsc4py,20221205-114436 9ee57a2 real,petsc4py-install.tar.gz,0.0,35
 petsc4py_20221205-114354_9ee57a2_complex_petsc4py-install.tar.gz,petsc4py,20221205-114354 9ee57a2 complex,petsc4py-install.tar.gz,0.0,18
-occ_20221205-131612_9ee57a2_occ-install.tar.gz,occ,20221205-131612 9ee57a2,occ-install.tar.gz,0.0,15
+occ_20221205-131612_9ee57a2_occ-install.tar.gz,occ,20221205-131612 9ee57a2,occ-install.tar.gz,0.0,18
 ngsolve_20221205-174020_2a19414_ngsolve-install.tar.gz,ngsolve,20221205-174020 2a19414,ngsolve-install.tar.gz,0.0,4
-mpi4py_20221205-104235_9ee57a2_mpi4py-install.tar.gz,mpi4py,20221205-104235 9ee57a2,mpi4py-install.tar.gz,0.0,62
-h5py_20221205-111557_9ee57a2_h5py-install.tar.gz,h5py,20221205-111557 9ee57a2,h5py-install.tar.gz,0.0,57
+mpi4py_20221205-104235_9ee57a2_mpi4py-install.tar.gz,mpi4py,20221205-104235 9ee57a2,mpi4py-install.tar.gz,0.0,65
+h5py_20221205-111557_9ee57a2_h5py-install.tar.gz,h5py,20221205-111557 9ee57a2,h5py-install.tar.gz,0.0,60
 gmsh_20221205-141819_9ee57a2_gmsh-install.tar.gz,gmsh,20221205-141819 9ee57a2,gmsh-install.tar.gz,0.0,4
 firedrake_20221205-131931_9ee57a2_real_firedrake-install.tar.gz,firedrake,20221205-131931 9ee57a2 real,firedrake-install.tar.gz,0.0,3
 firedrake_20221205-131928_9ee57a2_complex_firedrake-install.tar.gz,firedrake,20221205-131928 9ee57a2 complex,firedrake-install.tar.gz,0.0,3
 fenicsx_20221205-131908_9ee57a2_complex_fenicsx-install.tar.gz,fenicsx,20221205-131908 9ee57a2 complex,fenicsx-install.tar.gz,0.0,7
 fenicsx_20221205-131902_9ee57a2_real_fenicsx-install.tar.gz,fenicsx,20221205-131902 9ee57a2 real,fenicsx-install.tar.gz,0.0,5
 fenics_20221205-150442_9ee57a2_fenics-install.tar.gz,fenics,20221205-150442 9ee57a2,fenics-install.tar.gz,0.0,6
+ngsolve_20221206-055415_6761593_ngsolve-install.tar.gz,ngsolve,20221206-055415 6761593,ngsolve-install.tar.gz,0.0,2
