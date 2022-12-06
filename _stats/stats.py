@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from datetime import date
 
@@ -5,7 +6,7 @@ from release_download_count import release_download_count
 
 df = pd.read_csv("stats.csv")
 
-counts_dict = release_download_count("fem-on-kaggle/fem-on-kaggle", "", 50)
+counts_dict = release_download_count("fem-on-kaggle/fem-on-kaggle", os.environ.get("TOKEN", ""), 50)
 
 date_header = date.today().strftime("count_%Y_%m_%d")
 if date_header not in df.columns:
@@ -23,7 +24,7 @@ for (name_asset, count) in counts_dict.items():
         new_row["version"] = version
         new_row["asset"] = name_asset[1]
         new_row[date_header] = count
-        df = df.append(new_row, ignore_index=True)
+        df = pd.concat((df, pd.DataFrame(new_row, index=[0])), ignore_index=True)
     else:
         df.loc[condition, date_header] = count
 

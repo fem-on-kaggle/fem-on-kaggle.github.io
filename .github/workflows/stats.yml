@@ -41,7 +41,7 @@ jobs:
       run: |
         pushd _stats
         ln -s ../_build/stats/stats.csv stats.csv
-        python3 stats.py
+        TOKEN="${{ steps.token_gh_pages.outputs.token }}" python3 stats.py
         popd
     - name: Deploy to GitHub branch
       if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main'
@@ -56,6 +56,13 @@ jobs:
         git push origin stats
         popd
       shell: bash
+    - name: Deploy to GitHub artifacts
+      if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref != 'refs/heads/main'
+      uses: actions/upload-artifact@v3
+      with:
+        name: stats
+        path: _build/stats
+        retention-days: 1
     - name: Warn if scheduled workflow is about to be disabled
       if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
       uses: fem-on-colab/warn-workflow-about-to-be-disabled-action@main
