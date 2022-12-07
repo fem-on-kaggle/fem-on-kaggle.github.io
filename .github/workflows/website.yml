@@ -5,6 +5,7 @@ on:
     branches:
       - "**"
       - "!gh-pages"
+      - "!**-update-20**"
   pull_request:
     branches:
       - main
