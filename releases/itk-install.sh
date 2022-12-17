@@ -16,12 +16,12 @@ ITK_INSTALLED="$SHARE_PREFIX/itk.installed"
 
 if [[ ! -f $ITK_INSTALLED ]]; then
     # Install vtk
-    VTK_INSTALL_SCRIPT_PATH=${VTK_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/41bdfe4/releases/vtk-install.sh"}
+    VTK_INSTALL_SCRIPT_PATH=${VTK_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/1c16415/releases/vtk-install.sh"}
     [[ $VTK_INSTALL_SCRIPT_PATH == http* ]] && VTK_INSTALL_SCRIPT_DOWNLOAD=${VTK_INSTALL_SCRIPT_PATH} && VTK_INSTALL_SCRIPT_PATH=/tmp/vtk-install.sh && [[ ! -f ${VTK_INSTALL_SCRIPT_PATH} ]] && wget ${VTK_INSTALL_SCRIPT_DOWNLOAD} -O ${VTK_INSTALL_SCRIPT_PATH}
     source $VTK_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    ITK_ARCHIVE_PATH=${ITK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/itk-20221205-092449-9ee57a2/itk-install.tar.gz"}
+    ITK_ARCHIVE_PATH=${ITK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/itk-20221217-073213-63bddb5/itk-install.tar.gz"}
     [[ $ITK_ARCHIVE_PATH == http* ]] && ITK_ARCHIVE_DOWNLOAD=${ITK_ARCHIVE_PATH} && ITK_ARCHIVE_PATH=/tmp/itk-install.tar.gz && wget ${ITK_ARCHIVE_DOWNLOAD} -O ${ITK_ARCHIVE_PATH}
     if [[ $ITK_ARCHIVE_PATH != skip ]]; then
         tar -xzf $ITK_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
