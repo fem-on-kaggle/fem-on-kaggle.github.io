@@ -45,6 +45,8 @@ Timeline and funding
 
    * - November 2022
      - Early development of **FEM on Kaggle** begins at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ as a spin-off of FEM on Colab.
+   * - December 2022
+     - Small donations can now be sent through the `GitHub Sponsors <https://github.com/sponsors/francesco-ballarin>`__ program.
 
 Learn more about FEM on Kaggle
 ------------------------------
