@@ -16,6 +16,11 @@ How to contribute
     :width: 80px
     :alt: Contact us via email
 
+Contributing: small donations through GitHub Sponsors
+-----------------------------------------------------
+
+Small donations can be sent through the `GitHub Sponsors <https://github.com/sponsors/francesco-ballarin>`__ program.
+
 Contributing: reporting broken packages
 ---------------------------------------
 
