@@ -21,7 +21,7 @@ if [[ ! -f $ITK_INSTALLED ]]; then
     source $VTK_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    ITK_ARCHIVE_PATH=${ITK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/itk-20221217-073213-63bddb5/itk-install.tar.gz"}
+    ITK_ARCHIVE_PATH=${ITK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/itk-20221223-093500-81dc289/itk-install.tar.gz"}
     [[ $ITK_ARCHIVE_PATH == http* ]] && ITK_ARCHIVE_DOWNLOAD=${ITK_ARCHIVE_PATH} && ITK_ARCHIVE_PATH=/tmp/itk-install.tar.gz && wget ${ITK_ARCHIVE_DOWNLOAD} -O ${ITK_ARCHIVE_PATH}
     if [[ $ITK_ARCHIVE_PATH != skip ]]; then
         tar -xzf $ITK_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
