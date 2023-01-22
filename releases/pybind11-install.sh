@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2022 by the FEM on Colab authors
+# Copyright (C) 2021-2023 by the FEM on Colab authors
 #
 # This file is part of FEM on Colab.
 #
@@ -16,12 +16,12 @@ PYBIND11_INSTALLED="$SHARE_PREFIX/pybind11.installed"
 
 if [[ ! -f $PYBIND11_INSTALLED ]]; then
     # Install mpi4py
-    MPI4PY_INSTALL_SCRIPT_PATH=${MPI4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/d5da14f/releases/mpi4py-install.sh"}
+    MPI4PY_INSTALL_SCRIPT_PATH=${MPI4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/5bf9399/releases/mpi4py-install.sh"}
     [[ $MPI4PY_INSTALL_SCRIPT_PATH == http* ]] && MPI4PY_INSTALL_SCRIPT_DOWNLOAD=${MPI4PY_INSTALL_SCRIPT_PATH} && MPI4PY_INSTALL_SCRIPT_PATH=/tmp/mpi4py-install.sh && [[ ! -f ${MPI4PY_INSTALL_SCRIPT_PATH} ]] && wget ${MPI4PY_INSTALL_SCRIPT_DOWNLOAD} -O ${MPI4PY_INSTALL_SCRIPT_PATH}
     source $MPI4PY_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    PYBIND11_ARCHIVE_PATH=${PYBIND11_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/pybind11-20230101-032013-2d74d87/pybind11-install.tar.gz"}
+    PYBIND11_ARCHIVE_PATH=${PYBIND11_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/pybind11-20230122-151657-fe393a5/pybind11-install.tar.gz"}
     [[ $PYBIND11_ARCHIVE_PATH == http* ]] && PYBIND11_ARCHIVE_DOWNLOAD=${PYBIND11_ARCHIVE_PATH} && PYBIND11_ARCHIVE_PATH=/tmp/pybind11-install.tar.gz && wget ${PYBIND11_ARCHIVE_DOWNLOAD} -O ${PYBIND11_ARCHIVE_PATH}
     if [[ $PYBIND11_ARCHIVE_PATH != skip ]]; then
         rm -rf /usr/lib/python*/*-packages/pybind11*
