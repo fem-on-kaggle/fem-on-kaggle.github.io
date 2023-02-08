@@ -16,12 +16,12 @@ MPI4PY_INSTALLED="$SHARE_PREFIX/mpi4py.installed"
 
 if [[ ! -f $MPI4PY_INSTALLED ]]; then
     # Install gcc
-    GCC_INSTALL_SCRIPT_PATH=${GCC_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/431ea22/releases/gcc-install.sh"}
+    GCC_INSTALL_SCRIPT_PATH=${GCC_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/27c36ba/releases/gcc-install.sh"}
     [[ $GCC_INSTALL_SCRIPT_PATH == http* ]] && GCC_INSTALL_SCRIPT_DOWNLOAD=${GCC_INSTALL_SCRIPT_PATH} && GCC_INSTALL_SCRIPT_PATH=/tmp/gcc-install.sh && [[ ! -f ${GCC_INSTALL_SCRIPT_PATH} ]] && wget ${GCC_INSTALL_SCRIPT_DOWNLOAD} -O ${GCC_INSTALL_SCRIPT_PATH}
     source $GCC_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    MPI4PY_ARCHIVE_PATH=${MPI4PY_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mpi4py-20230201-030044-fe393a5/mpi4py-install.tar.gz"}
+    MPI4PY_ARCHIVE_PATH=${MPI4PY_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mpi4py-20230208-203353-8ea9475/mpi4py-install.tar.gz"}
     [[ $MPI4PY_ARCHIVE_PATH == http* ]] && MPI4PY_ARCHIVE_DOWNLOAD=${MPI4PY_ARCHIVE_PATH} && MPI4PY_ARCHIVE_PATH=/tmp/mpi4py-install.tar.gz && wget ${MPI4PY_ARCHIVE_DOWNLOAD} -O ${MPI4PY_ARCHIVE_PATH}
     if [[ $MPI4PY_ARCHIVE_PATH != skip ]]; then
         tar -xzf $MPI4PY_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
@@ -38,10 +38,12 @@ if [[ ! -f $MPI4PY_INSTALLED ]]; then
     # Add symbolic links to the MPI libraries in /usr/lib, because INSTALL_PREFIX/lib may not be in LD_LIBRARY_PATH
     # on the actual cloud instance
     if [[ $MPI4PY_ARCHIVE_PATH != skip ]]; then
-        ln -fs $INSTALL_PREFIX/lib/libmca*.so* /usr/lib
-        ln -fs $INSTALL_PREFIX/lib/libmpi*.so* /usr/lib
-        ln -fs $INSTALL_PREFIX/lib/libopen*.so* /usr/lib
-        ln -fs $INSTALL_PREFIX/lib/ompi*.so* /usr/lib
+        MPI_LIBS=('libmca*.so*' 'libmpi*.so*' 'libompi*.so*' 'libopen*.so*' 'ompi*.so*')
+        for MPI_LIB in "${MPI_LIBS[@]}"; do
+            rm -f /usr/lib/${MPI_LIB}
+            rm -f /usr/lib/x86_64-linux-gnu/${MPI_LIB}
+            ln -fs $INSTALL_PREFIX/lib/${MPI_LIB} /usr/lib
+        done
     fi
 
     # Mark package as installed
