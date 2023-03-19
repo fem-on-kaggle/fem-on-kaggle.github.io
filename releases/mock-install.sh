@@ -16,7 +16,7 @@ MOCK_INSTALLED="$SHARE_PREFIX/mock.installed"
 
 if [[ ! -f $MOCK_INSTALLED ]]; then
     # Download and uncompress library archive
-    MOCK_ARCHIVE_PATH=${MOCK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mock-20230318-005941-fe393a5/mock-install.tar.gz"}
+    MOCK_ARCHIVE_PATH=${MOCK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mock-20230319-140634-7a895ff/mock-install.tar.gz"}
     [[ $MOCK_ARCHIVE_PATH == http* ]] && MOCK_ARCHIVE_DOWNLOAD=${MOCK_ARCHIVE_PATH} && MOCK_ARCHIVE_PATH=/tmp/mock-install.tar.gz && wget ${MOCK_ARCHIVE_DOWNLOAD} -O ${MOCK_ARCHIVE_PATH}
     if [[ $MOCK_ARCHIVE_PATH != skip ]]; then
         rm -rf /usr/lib/python*/*-packages/mock*
@@ -30,4 +30,67 @@ if [[ ! -f $MOCK_INSTALLED ]]; then
 fi
 
 # Display end user packages announcement
-echo $MOCK_ANNOUNCEMENT_0
+set +x
+cat << EOF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################################
+#    This installation is offered by FEM on Kaggle, an open-source project     #
+#       developed and maintained at Università Cattolica del Sacro Cuore       #
+#    by Dr. Francesco Ballarin. Please see https://fem-on-kaggle.github.io/    #
+#       for more details, including a list of further available packages       #
+#       and how to sponsor the development or contribute to the project.       #
+#                                                                              #
+#  We are conducting an informal survey on FEM on Kaggle usage by our users.   #
+#   The survey is anonymous, and its compilation will typically only require   #
+#   a couple of minutes of your time. If you wish, give us your feedback at    #
+#                     https://forms.gle/36sZZWNvPpUv8XWr7                      #
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EOF
+set -x
