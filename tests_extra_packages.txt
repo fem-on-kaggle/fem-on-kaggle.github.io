@@ -1,0 +1,54 @@
+=================
+----- boost -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/boost/test.ipynb
+=================
+
+===============
+----- gcc -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/gcc/test.ipynb
+===============
+
+================
+----- h5py -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/h5py/test.ipynb
+================
+
+================
+----- mock -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/mock/test.ipynb
+================
+
+==================
+----- mpi4py -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/mpi4py/test.ipynb
+==================
+
+===============
+----- occ -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/occ/test.ipynb
+===============
+
+====================
+----- petsc4py -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/petsc4py/test.ipynb
+====================
+
+====================
+----- pybind11 -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/pybind11/test-none.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/pybind11/test-gpp.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/pybind11/test-mpicxx.ipynb
+====================
+
+====================
+----- slepc4py -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/slepc4py/test.ipynb
+====================
+
+===============
+----- vtk -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/vtk/test-vtk.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/vtk/test-pyvista.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/vtk/test-adios2.ipynb
+===============
+

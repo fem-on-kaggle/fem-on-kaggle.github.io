@@ -1,0 +1,36 @@
+==================
+----- fenics -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-dolfin.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-mshr.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-multiphenics.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-rbnics.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-dolfin-checkpoint.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenics/test-dolfin-cpp-error.ipynb
+==================
+
+===================
+----- fenicsx -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenicsx/test-dolfinx.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/01_block_poisson/tutorial_block_poisson.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb
+===================
+
+=====================
+----- firedrake -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-firedrake.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-fireshape.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-rol.ipynb
+=====================
+
+================
+----- gmsh -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/gmsh/test.ipynb
+================
+
+===================
+----- ngsolve -----
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsolve.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsolve-extras.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsxfem.ipynb
+===================
+
