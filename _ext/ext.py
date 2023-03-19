@@ -83,6 +83,21 @@ A complete list of all dependencies is reported below. Users should typically no
                 output.append(nodes.raw(text=card_num, format="html"))
         # Conclusion to extra packages
         output.append(nodes.raw(text="</div>", format="html"))
+        # Test downloads
+        test_downloads = f"""
+<input type="checkbox" name="test-downloads-toggle" id="test-downloads-toggle" class="test-downloads-toggle">
+<label for="test-downloads-toggle" class="test-downloads-toggle-title">All tests</label>
+<div class="test-downloads-content">
+<p>
+For convenience, text files containing links to all <b>FEM on Kaggle</b> tests can be downloaded below:
+<ul>
+    <li><a href="tests_packages.txt">Tests for end user packages</a></li>
+    <li><a href="tests_extra_packages.txt">Tests for extra packages</a></li>
+</ul>
+</p>
+</div>
+"""
+        output.append(nodes.raw(text=test_downloads, format="html"))
         return output
 
     @classmethod
@@ -126,12 +141,8 @@ A complete list of all dependencies is reported below. Users should typically no
     <ul class="jq-dropdown-menu">
 """
         for (library, url) in libraries_urls.items():
-            if not url.startswith("https://kaggle.com/kernels/welcome?src="):
-                kaggle_url = f"https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/{url}"
-            else:
-                kaggle_url = url
             dropdown += f"""
-        <li><a href="{kaggle_url}" target="_blank">{cls._library_image(library)} {library}</a></li>
+        <li><a href="{cls._kaggle_url(url)}" target="_blank">{cls._library_image(library)} {library}</a></li>
 """
         dropdown += f"""
     </ul>
@@ -142,6 +153,13 @@ A complete list of all dependencies is reported below. Users should typically no
         return dropdown
 
     _dropdown_id = 1
+
+    @staticmethod
+    def _kaggle_url(url):
+        if not url.startswith("https://kaggle.com/kernels/welcome?src="):
+            return f"https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/{url}"
+        else:
+            return url
 
     @staticmethod
     def _library_image(library):
@@ -157,8 +175,6 @@ A complete list of all dependencies is reported below. Users should typically no
             logo = "_static/images/gmsh-logo.png"
         elif library == "h5py":
             logo = "_static/images/h5py-logo.png"
-        elif library in ("itk", "itkwidgets"):
-            logo = "_static/images/itk-logo.png"
         elif library == "mock":
             logo = "_static/images/mock-logo.png"
         elif library == "mpi4py":
@@ -179,7 +195,7 @@ A complete list of all dependencies is reported below. Users should typically no
             logo = "_static/images/rbnics-logo.png"
         elif library == "slepc4py":
             logo = "_static/images/slepc4py-logo.png"
-        elif library in ("vtk", "pyvista", "pythreejs"):
+        elif library in ("vtk", "pyvista", "adios2"):
             logo = "_static/images/vtk-logo.png"
         else:
             raise RuntimeError("Invalid type " + library)
@@ -359,6 +375,17 @@ def on_build_finished(app, exc):
                         "Failed creating link for " + package_file_git + "\n"
                         + "stdout contains " + create_link.stdout.decode() + "\n"
                         + "stderr contains " + create_link.stderr.decode() + "\n")
+        # Write out helper text files containing links to all test notebooks
+        for (packages_dict, packages_filename) in zip((packages, extra_packages), ("packages", "extra_packages")):
+            with open(os.path.join(app.outdir, "tests_" + packages_filename + ".txt"), "w") as f:
+                for package in packages_dict.keys():
+                    f.write("=" * (len(package) + 12) + "\n")
+                    f.write("----- " + package + " -----\n")
+                    data = packages_dict[package]
+                    for (_, url) in data["tests"].items():
+                        f.write(Packages._kaggle_url(url) + "\n")
+                    f.write("=" * (len(package) + 12) + "\n")
+                    f.write("\n")
 
 
 create_sitemap_bak = sphinx_material.create_sitemap
