@@ -54,6 +54,7 @@ Learn more about FEM on Kaggle
     :maxdepth: 1
 
     packages
+    advanced
     contributing
     citing
 
