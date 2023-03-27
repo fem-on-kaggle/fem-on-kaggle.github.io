@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta content="If you use FEM on Kaggle in your work, please cite our website" lang="en" name="description" xml:lang="en" />
+<meta content="Advanced usage of FEM on Kaggle packages and scripts." lang="en" name="description" xml:lang="en" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -62,7 +62,7 @@
     <link rel="apple-touch-icon" href="_static/images/fem-on-kaggle-logo.png"/>
   
   
-    <title>How to cite &#8212; FEM on Kaggle</title>
+    <title>Advanced usage &#8212; FEM on Kaggle</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/material.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.css" />
@@ -76,7 +76,8 @@
     <script src="_static/js/external_links.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="How to contribute" href="contributing.html" />
+    <link rel="next" title="How to contribute" href="contributing.html" />
+    <link rel="prev" title="Packages" href="packages.html" />
   
     <link rel="apple-touch-icon" href="_static/images/fem-on-kaggle-logo.png"/>
   
@@ -97,7 +98,7 @@
   <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
   <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
   <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
-  <a href="#citing" tabindex="1" class="md-skip"> Skip to content </a>
+  <a href="#advanced" tabindex="1" class="md-skip"> Skip to content </a>
   <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
@@ -115,7 +116,7 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           <span class="md-header-nav__topic">FEM on Kaggle</span>
-          <span class="md-header-nav__topic"> How to cite </span>
+          <span class="md-header-nav__topic"> Advanced usage </span>
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
@@ -182,11 +183,11 @@
             
             <li class="md-tabs__item"><a href="packages.html" class="md-tabs__link">Packages</a></li>
             
-            <li class="md-tabs__item"><a href="advanced.html" class="md-tabs__link">Advanced usage</a></li>
+            <li class="md-tabs__item md-tabs__item_current"><a href="#" class="md-tabs__link">Advanced usage</a></li>
             
             <li class="md-tabs__item"><a href="contributing.html" class="md-tabs__link">How to contribute</a></li>
             
-            <li class="md-tabs__item md-tabs__item_current"><a href="#" class="md-tabs__link">How to cite</a></li>
+            <li class="md-tabs__item"><a href="citing.html" class="md-tabs__link">How to cite</a></li>
       </ul>
     </div>
   </nav>
@@ -235,7 +236,28 @@
     <li class="md-nav__item">
     
     
-      <a href="advanced.html" class="md-nav__link">Advanced usage</a>
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc_disabled">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Advanced usage </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Advanced usage</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#advanced--page-root" class="md-nav__link">Advanced usage</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#specific-versions-of-end-user-packages" class="md-nav__link">Specific versions of end user packages</a>
+        </li>
+        <li class="md-nav__item"><a href="#github-workflow-to-facilitate-notebook-preparation" class="md-nav__link">GitHub workflow to facilitate notebook preparation</a>
+        </li></ul>
+            </nav>
+        </li>
+    
+<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/advanced.rst.txt">Show Source</a> </li>
+
+  </ul>
+</nav>
       
     
     </li>
@@ -249,19 +271,7 @@
     <li class="md-nav__item">
     
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc_disabled">
-    <label class="md-nav__link md-nav__link--active" for="__toc"> How to cite </label>
-    
-      <a href="#" class="md-nav__link md-nav__link--active">How to cite</a>
-      
-        
-<nav class="md-nav md-nav--secondary">
-  <ul class="md-nav__list" data-md-scrollfix="">
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/citing.rst.txt">Show Source</a> </li>
-
-  </ul>
-</nav>
+      <a href="citing.html" class="md-nav__link">How to cite</a>
       
     
     </li>
@@ -277,9 +287,18 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#advanced--page-root" class="md-nav__link">Advanced usage</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#specific-versions-of-end-user-packages" class="md-nav__link">Specific versions of end user packages</a>
+        </li>
+        <li class="md-nav__item"><a href="#github-workflow-to-facilitate-notebook-preparation" class="md-nav__link">GitHub workflow to facilitate notebook preparation</a>
+        </li></ul>
+            </nav>
+        </li>
     
-<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/citing.rst.txt">Show Source</a> </li>
+<li class="md-nav__item"><a class="md-nav__extra_link" href="_sources/advanced.rst.txt">Show Source</a> </li>
 
 <li id="searchbox" class="md-nav__item"></li>
 
@@ -292,9 +311,26 @@
         <div class="md-content">
           <article class="md-content__inner md-typeset" role="main">
             
-  <section id="how-to-cite">
-<h1 id="citing--page-root">How to cite<a class="headerlink" href="#citing--page-root" title="Permalink to this heading">¶</a></h1>
-<p>If you use <strong>FEM on Kaggle</strong> in your work, please cite the <a class="reference external" href="https://fem-on-kaggle.github.io/">FEM on Kaggle website</a>.</p>
+  <section id="advanced-usage">
+<span id="advanced"></span><h1 id="advanced--page-root">Advanced usage<a class="headerlink" href="#advanced--page-root" title="Permalink to this heading">¶</a></h1>
+<section id="specific-versions-of-end-user-packages">
+<h2 id="specific-versions-of-end-user-packages">Specific versions of end user packages<a class="headerlink" href="#specific-versions-of-end-user-packages" title="Permalink to this heading">¶</a></h2>
+<p>End user packages <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> are automatically built on a weekly basis, in order to follow upstream development.</p>
+<p>Users that do not wish to be up to date with the upstream development cycle are invited to hardcode in their Kaggle notebooks a fixed release by replacing</p>
+<div class="package-installation" style="margin-top: 0; margin-bottom: 0; margin-left: 1rem;">https://fem-on-kaggle.github.io/releases/{install-script}</div><p>in the instructions above with</p>
+<div class="package-installation" style="margin-top: 0; margin-bottom: 0; margin-left: 1rem;">https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/{commit}/releases/{install-script}</div><p>where <code class="docutils literal notranslate"><span class="pre">{install-script}</span></code> is the installation script of the desired package, and <code class="docutils literal notranslate"><span class="pre">{commit}</span></code> is the SHA of a commit <a class="reference external" href="https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/commits/gh-pages">in this list</a> at which the desired version was available. Those users may also want to <a class="reference external" href="https://www.kaggle.com/docs/notebooks#dockerfiles-and-notebooks-versions">pin their Kaggle docker container to a specific image</a>, rather than the default option of running on the latest container.</p>
+<p class="rubric">Notes</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<p>The FEniCS package is not automatically built, due to the upstream development having moved to FEniCSx.</p>
+</aside>
+</aside>
+</section>
+<section id="github-workflow-to-facilitate-notebook-preparation">
+<h2 id="github-workflow-to-facilitate-notebook-preparation">GitHub workflow to facilitate notebook preparation<a class="headerlink" href="#github-workflow-to-facilitate-notebook-preparation" title="Permalink to this heading">¶</a></h2>
+<p>The <a class="reference external" href="https://github.com/fem-on-kaggle/open-in-kaggle-workflow">Open in Kaggle workflow</a> facilitates automatic preparation of notebooks for deployment on Kaggle, by automatically adding installation cells, replacing images contained in the local repository with their base64 representation, and scraping links to other notebooks in the same repository. Notebooks can be uploaded to Google Drive, to a GitHub repository or as artifact of a GitHub actions run. Sample usage is available <a class="reference external" href="https://github.com/fem-on-kaggle/open-in-kaggle-workflow/blob/main/.github/workflows/ci.yml">in this workflow file</a>.</p>
+</section>
 </section>
 
 
@@ -307,7 +343,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
           
-            <a href="contributing.html" title="How to contribute"
+            <a href="packages.html" title="Packages"
                class="md-flex md-footer-nav__link md-footer-nav__link--prev"
                rel="prev">
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -316,10 +352,21 @@
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span
-                      class="md-footer-nav__direction"> Previous </span> How to contribute </span>
+                      class="md-footer-nav__direction"> Previous </span> Packages </span>
               </div>
             </a>
           
+          
+            <a href="contributing.html" title="How to contribute"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
+                class="md-flex__ellipsis"> <span
+                class="md-footer-nav__direction"> Next </span> How to contribute </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink"><i
+                class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
           
         </a>
         
