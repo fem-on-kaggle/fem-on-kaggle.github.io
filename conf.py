@@ -43,7 +43,7 @@ html_theme_options = {
     "nav_title": "FEM on Kaggle",
 
     # Set you GA account ID to enable tracking
-    "google_analytics_account": "UA-251001621-1",
+    "google_analytics_account": "G-EN1Z9X0D5D",
 
     # Specify a base_url used to generate sitemap.xml. If not
     # specified, then no sitemap will be built.
