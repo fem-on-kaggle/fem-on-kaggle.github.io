@@ -23,12 +23,12 @@ if [[ ! -L ${INSTALL_PREFIX}/lib64 ]]; then
 fi
 if [[ ! -L ${INSTALL_PREFIX}/lib64 || ! -d ${INSTALL_PREFIX}/lib64 ]]; then
     echo "Error: ${INSTALL_PREFIX}/lib64 is not a link to a directory."
-    exit
+    exit 1
 fi
 
 if [[ ! -f $GCC_INSTALLED ]]; then
     # Download and uncompress library archive
-    GCC_ARCHIVE_PATH=${GCC_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gcc-20230406-084023-c9e9c39/gcc-install.tar.gz"}
+    GCC_ARCHIVE_PATH=${GCC_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gcc-20230406-102936-c9e9c39/gcc-install.tar.gz"}
     [[ $GCC_ARCHIVE_PATH == http* ]] && GCC_ARCHIVE_DOWNLOAD=${GCC_ARCHIVE_PATH} && GCC_ARCHIVE_PATH=/tmp/gcc-install.tar.gz && wget ${GCC_ARCHIVE_DOWNLOAD} -O ${GCC_ARCHIVE_PATH}
     if [[ $GCC_ARCHIVE_PATH != skip ]]; then
         tar -xzf $GCC_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
