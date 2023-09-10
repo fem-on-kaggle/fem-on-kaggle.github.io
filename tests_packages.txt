@@ -19,6 +19,7 @@ https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphen
 ----- firedrake -----
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-firedrake.ipynb
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-fireshape.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-irksome.ipynb
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/firedrake/test-rol.ipynb
 =====================
 
