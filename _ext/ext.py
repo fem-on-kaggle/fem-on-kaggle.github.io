@@ -167,7 +167,7 @@ For convenience, text files containing links to all <b>FEM on Kaggle</b> tests c
             logo = "_static/images/boost-logo.png"
         elif library in ("dolfin", "dolfinx", "fenics", "fenicsx", "mshr") or library.startswith("dolfin ("):
             logo = "_static/images/fenics-logo.png"
-        elif library in ("firedrake", "fireshape", "ROL"):
+        elif library in ("firedrake", "fireshape", "irksome", "ROL"):
             logo = "_static/images/firedrake-logo.png"
         elif library == "gcc":
             logo = "_static/images/gcc-logo.png"
