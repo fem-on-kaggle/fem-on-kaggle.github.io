@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from docutils import nodes
 from docutils.parsers.rst import Directive
 from packages import extra_packages, packages
+from outage import issues
 import sphinx_material
 
 class Packages(Directive):
@@ -15,7 +16,23 @@ class Packages(Directive):
     def run(self):
         output = list()
         # Introduction to packages
-        intro = f"""
+        if len(issues) > 0:
+            intro = f"""
+<div class="package-card" style="background-color: #dc143c; box-shadow: 0 4px 8px 0 #f8b5c2;">
+  <div class="package-logo">
+    <img src="_static/images/outage.png" style="vertical-align: middle; width: 100px">
+  </div>
+  <div class="package-content">
+    <h3 class="package-title">
+      A temporary outage may be affecting package availability
+    </h3>
+    See {", ".join([self._issue_link(issue) for issue in issues])} for more details.
+  </div>
+</div>
+"""
+        else:
+            intro = ""
+        intro += f"""
 <div class="package-card" style="background-color: #fee57f; box-shadow: 0 4px 8px 0 #fef2bf;">
   <div class="package-logo">
     <img src="_static/images/warning.png" style="vertical-align: middle; width: 100px">
@@ -162,6 +179,10 @@ For convenience, text files containing links to all <b>FEM on Kaggle</b> tests c
             return url
 
     @staticmethod
+    def _issue_link(issue):
+        return f'<a href="https://github.com/fem-on-kaggle/fem-on-kaggle/issues/{issue}" target="_blank" style="color: white">issue #{issue}</a>'
+
+    @staticmethod
     def _library_image(library):
         if library == "boost":
             logo = "_static/images/boost-logo.png"
@@ -183,7 +204,7 @@ For convenience, text files containing links to all <b>FEM on Kaggle</b> tests c
             logo = "_static/images/multiphenics-logo.png"
         elif library == "multiphenicsx" or library.startswith("multiphenicsx ("):
             logo = "_static/images/multiphenicsx-logo.png"
-        elif library in ("ngsolve", "ngsxfem") or library.startswith("ngsolve ("):
+        elif library in ("ngsolve", "ngsxfem", "ngspetsc") or library.startswith("ngsolve ("):
             logo = "_static/images/ngsolve-logo.png"
         elif library == "occ":
             logo = "_static/images/occ-logo.png"
