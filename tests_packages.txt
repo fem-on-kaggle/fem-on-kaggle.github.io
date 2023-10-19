@@ -33,5 +33,6 @@ https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-k
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsolve.ipynb
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsolve-extras.ipynb
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngsxfem.ipynb
+https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/ngsolve/test-ngspetsc.ipynb
 ===================
 
