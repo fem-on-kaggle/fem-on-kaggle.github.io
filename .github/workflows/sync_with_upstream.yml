@@ -22,8 +22,12 @@ jobs:
           file-patterns: '* **/*'
           commit-message-prefix: Sync with FEM on Colab website
           token: ${{ secrets.WORKFLOW_ACCESS_TOKEN }}
+
+  warn:
+    runs-on: ubuntu-latest
+    if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
+    steps:
       - name: Warn if scheduled workflow is about to be disabled
-        if: github.repository == 'fem-on-kaggle/fem-on-kaggle.github.io' && github.ref == 'refs/heads/main' && github.event_name == 'schedule'
         uses: fem-on-colab/warn-workflow-about-to-be-disabled-action@main
         with:
           workflow-filename: sync_with_upstream.yml
