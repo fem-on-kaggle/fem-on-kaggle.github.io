@@ -32,11 +32,10 @@ Currently supported libraries are `FEniCS <https://bitbucket.org/fenics-project/
 
 **FEM on Kaggle** is a spin-off of `FEM on Colab <https://fem-on-colab.github.io>`__.
 
-Authors and contributors
+Authors
 ------------------------
 
 **FEM on Kaggle** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
-We acknowledge all contributors listed in the `AUTHORS file <https://github.com/fem-on-kaggle/fem-on-kaggle/blob/master/AUTHORS>`__.
 
 Timeline and funding
 ------------------------
