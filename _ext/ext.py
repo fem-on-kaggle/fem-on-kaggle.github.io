@@ -119,8 +119,15 @@ For convenience, text files containing links to all <b>FEM on Kaggle</b> tests c
 
     @classmethod
     def _card(cls, package, title, installation, installation_suffixes, buttons):
+        if len(installation_suffixes) > 1 and "" in installation_suffixes:
+            # The "" suffix was added for backward compatibility, but should not be displayed
+            installation_suffixes = installation_suffixes.copy()
+            installation_suffixes.remove("")
+            if len(installation_suffixes) == 1:
+                assert installation_suffixes[0] == "real", f"Invalid suffix {installation_suffixes[0]}, expected real"
+                installation_suffixes[0] = ""
         if len(installation_suffixes) == 1:
-            assert installation_suffixes[0] == ""
+            assert installation_suffixes[0] == "", f"Invalid suffix {installation_suffixes[0]}, expected blank"
             package_installation = "<div class=\"package-installation\">" + installation.lstrip().rstrip() + "</div>"
         else:
             package_installation_template = installation.lstrip().rstrip()
@@ -334,10 +341,8 @@ def on_build_finished(app, exc):
         all_packages_files = dict()
         for package in list(all_packages.keys()):
             installation_suffixes = all_packages[package]["installation_suffixes"]
-            if len(installation_suffixes) > 1:
-                installation_suffixes += [""]
-            else:
-                assert installation_suffixes[0] == ""
+            if len(installation_suffixes) == 1:
+                assert installation_suffixes[0] == "", f"Invalid suffix {installation_suffixes[0]}, expected blank"
             for suffix in installation_suffixes:
                 for extension in (".sh", ".docker"):
                     if suffix == "":
@@ -346,56 +351,27 @@ def on_build_finished(app, exc):
                         package_install_name = package + "-install-" + suffix + extension
                     package_install_git = os.path.join("releases", package_install_name)
                     package_install = os.path.join(releases_dir, package_install_name)
-                    assert package_install not in all_packages_files
+                    assert package_install not in all_packages_files, f"Could not find {package_install}"
                     all_packages_files[package_install] = package_install_git
             for (_, test_notebook_name) in all_packages[package]["tests"].items():
                 if not test_notebook_name.startswith("https://kaggle.com/kernels/welcome?src="):
                     test_notebook_git = os.path.join("tests", test_notebook_name)
                     test_notebook = os.path.join(tests_dir, test_notebook_name)
-                    assert test_notebook not in all_packages_files
+                    assert test_notebook not in all_packages_files, f"Could not find {test_notebook}"
                     all_packages_files[test_notebook] = test_notebook_git
         for (package_file, package_file_git) in all_packages_files.items():
             os.makedirs(os.path.dirname(package_file), exist_ok=True)
-            is_link_process = subprocess.run(
-                "git ls-tree origin/gh-pages " + package_file_git,
+            copy_file = subprocess.run(
+                "git show origin/gh-pages:" + package_file_git + "> " + package_file,
                 shell=True, capture_output=True)
-            if is_link_process.returncode != 0:
+            if copy_file.returncode != 0:
                 raise RuntimeError(
-                    "Failed link checking for " + package_file_git + "\n"
-                    + "stdout contains " + is_link_process.stdout.decode() + "\n"
-                    + "stderr contains " + is_link_process.stderr.decode() + "\n")
-            is_link = is_link_process.stdout.decode().startswith("120000")
-            if not is_link:
-                copy_file = subprocess.run(
-                    "git show origin/gh-pages:" + package_file_git + "> " + package_file,
-                    shell=True, capture_output=True)
-                if copy_file.returncode != 0:
-                    raise RuntimeError(
-                        "Package file " + package_file_git + " not found\n"
-                        + "stdout contains " + copy_file.stdout.decode() + "\n"
-                        + "stderr contains " + copy_file.stderr.decode() + "\n")
-                copy_file = subprocess.run(
-                    "git show origin/gh-pages:" + package_file_git + "> " + package_file,
-                    shell=True, capture_output=True)
-            else:
-                assert package_file.startswith(releases_dir)
-                get_link_path = subprocess.run(
-                    "git show origin/gh-pages:" + package_file_git,
-                    shell=True, capture_output=True)
-                if get_link_path.returncode != 0:
-                    raise RuntimeError(
-                        "Failed getting link path for " + package_file_git + "\n"
-                        + "stdout contains " + get_link_path.stdout.decode() + "\n"
-                        + "stderr contains " + get_link_path.stderr.decode() + "\n")
-                create_link = subprocess.run(
-                    "cd " + releases_dir + " && ln -fs " + " " + get_link_path.stdout.decode()
-                    + " " + os.path.relpath(package_file, releases_dir),
-                    shell=True, capture_output=True)
-                if create_link.returncode != 0:
-                    raise RuntimeError(
-                        "Failed creating link for " + package_file_git + "\n"
-                        + "stdout contains " + create_link.stdout.decode() + "\n"
-                        + "stderr contains " + create_link.stderr.decode() + "\n")
+                    "Package file " + package_file_git + " not found\n"
+                    + "stdout contains " + copy_file.stdout.decode() + "\n"
+                    + "stderr contains " + copy_file.stderr.decode() + "\n")
+            copy_file = subprocess.run(
+                "git show origin/gh-pages:" + package_file_git + "> " + package_file,
+                shell=True, capture_output=True)
         # Write out helper text files containing links to all test notebooks
         for (packages_dict, packages_filename) in zip((packages, extra_packages), ("packages", "extra_packages")):
             with open(os.path.join(app.outdir, "tests_" + packages_filename + ".txt"), "w") as f:
