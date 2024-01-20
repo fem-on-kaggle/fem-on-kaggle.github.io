@@ -26,7 +26,7 @@ if [[ ! -f $GMSH_INSTALLED ]]; then
     source $OCC_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    GMSH_ARCHIVE_PATH=${GMSH_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gmsh-20240113-094208-2ad5073/gmsh-install.tar.gz"}
+    GMSH_ARCHIVE_PATH=${GMSH_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gmsh-20240120-010240-ca6fc00/gmsh-install.tar.gz"}
     [[ $GMSH_ARCHIVE_PATH == http* ]] && GMSH_ARCHIVE_DOWNLOAD=${GMSH_ARCHIVE_PATH} && GMSH_ARCHIVE_PATH=/tmp/gmsh-install.tar.gz && wget ${GMSH_ARCHIVE_DOWNLOAD} -O ${GMSH_ARCHIVE_PATH}
     if [[ $GMSH_ARCHIVE_PATH != skip ]]; then
         tar -xzf $GMSH_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
