@@ -28,7 +28,7 @@ Description
     :alt: FEM on Kaggle
 
 **FEM on Kaggle** is a collection of packages that allows to easily install several finite element libraries on Kaggle.
-Currently supported libraries are `FEniCS <https://bitbucket.org/fenics-project/dolfin>`__, `FEniCSx <https://github.com/FEniCS/dolfinx>`__, `firedrake <https://github.com/firedrakeproject/firedrake>`__ and `ngsolve <https://github.com/NGSolve/ngsolve>`__. Mesh generation via `gmsh <https://gitlab.onelab.info/gmsh/gmsh>`__ is also supported.
+Currently supported libraries are `FEniCS <https://bitbucket.org/fenics-project/dolfin>`__, `FEniCSx <https://github.com/FEniCS/dolfinx>`__, `firedrake <https://github.com/firedrakeproject/firedrake>`__ and `ngsolve <https://github.com/NGSolve/ngsolve>`__. Mesh generation via `gmsh <https://gitlab.onelab.info/gmsh/gmsh>`__ and `netgen <https://github.com/NGSolve/netgen>`__ is also supported.
 
 **FEM on Kaggle** is a spin-off of `FEM on Colab <https://fem-on-colab.github.io>`__.
 
