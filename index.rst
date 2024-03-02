@@ -3,7 +3,7 @@ FEM on Kaggle
 .. meta::
     :description lang=en:
         FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle.
-        FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin.
+        FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin.
         FEM on Kaggle is a spin-off of FEM on Colab.
 
 .. image:: _static/images/github-logo.png
@@ -35,7 +35,7 @@ Currently supported libraries are `FEniCS <https://bitbucket.org/fenics-project/
 Authors
 ------------------------
 
-**FEM on Kaggle** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Dr. Francesco Ballarin <https://www.francescoballarin.it>`__.
+**FEM on Kaggle** is currently developed and maintained at `Università Cattolica del Sacro Cuore <https://www.unicatt.it/>`__ by `Prof. Francesco Ballarin <https://www.francescoballarin.it>`__.
 
 Timeline and funding
 ------------------------

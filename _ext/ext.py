@@ -309,7 +309,7 @@ def on_build_finished(app, exc):
   "@context": "http://schema.org",
   "@type": "SoftwareApplication",
   "name": "FEM on Kaggle",
-  "description": "FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab.",
+  "description": "FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab.",
   "keywords": "fem-on-kaggle, Kaggle, finite element, jupyter",
   "softwareHelp": "https://fem-on-kaggle.github.io/",
   "operatingSystem": "Linux",
@@ -321,7 +321,7 @@ def on_build_finished(app, exc):
 </script>
 
 <meta property="og:title" content="FEM on Kaggle" />
-<meta property="og:description" content="FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Dr. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab." />
+<meta property="og:description" content="FEM on Kaggle is a collection of packages that allows to easily install several finite element libraries on Kaggle. FEM on Kaggle is currently developed at Università Cattolica del Sacro Cuore by Prof. Francesco Ballarin. FEM on Kaggle is a spin-off of FEM on Colab." />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="FEM on Kaggle" />
 <meta property="og:url" content="https://fem-on-kaggle.github.io/" />
