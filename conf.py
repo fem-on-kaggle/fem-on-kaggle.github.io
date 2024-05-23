@@ -29,6 +29,10 @@ templates_path = ["_templates"]
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
+# Suppress config.cache warnings
+# https://github.com/sphinx-doc/sphinx/issues/12300#issuecomment-2062238457
+suppress_warnings = ["config.cache"]
+
 
 # -- Options for HTML output -------------------------------------------------
 html_title = "FEM on Kaggle"
