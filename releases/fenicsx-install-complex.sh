@@ -21,7 +21,7 @@ if [[ ! -f $FENICSX_INSTALLED ]]; then
     source $PYBIND11_INSTALL_SCRIPT_PATH
 
     # Install boost (and its dependencies)
-    BOOST_INSTALL_SCRIPT_PATH=${BOOST_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/761e9ea/releases/boost-install.sh"}
+    BOOST_INSTALL_SCRIPT_PATH=${BOOST_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/a2141a6/releases/boost-install.sh"}
     [[ $BOOST_INSTALL_SCRIPT_PATH == http* ]] && BOOST_INSTALL_SCRIPT_DOWNLOAD=${BOOST_INSTALL_SCRIPT_PATH} && BOOST_INSTALL_SCRIPT_PATH=/tmp/boost-install.sh && [[ ! -f ${BOOST_INSTALL_SCRIPT_PATH} ]] && wget ${BOOST_INSTALL_SCRIPT_DOWNLOAD} -O ${BOOST_INSTALL_SCRIPT_PATH}
     source $BOOST_INSTALL_SCRIPT_PATH
 
@@ -36,7 +36,7 @@ if [[ ! -f $FENICSX_INSTALLED ]]; then
     source $VTK_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    FENICSX_ARCHIVE_PATH=${FENICSX_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/fenicsx-20240812-071745-5667c68-complex/fenicsx-install.tar.gz"}
+    FENICSX_ARCHIVE_PATH=${FENICSX_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/fenicsx-20240815-083918-5667c68-complex/fenicsx-install.tar.gz"}
     [[ $FENICSX_ARCHIVE_PATH == http* ]] && FENICSX_ARCHIVE_DOWNLOAD=${FENICSX_ARCHIVE_PATH} && FENICSX_ARCHIVE_PATH=/tmp/fenicsx-install.tar.gz && wget ${FENICSX_ARCHIVE_DOWNLOAD} -O ${FENICSX_ARCHIVE_PATH}
     if [[ $FENICSX_ARCHIVE_PATH != skip ]]; then
         tar -xzf $FENICSX_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
