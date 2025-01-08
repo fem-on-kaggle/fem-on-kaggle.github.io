@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2024 by the FEM on Colab authors
+# Copyright (C) 2021-2025 by the FEM on Colab authors
 #
 # This file is part of FEM on Colab.
 #
@@ -8,7 +8,7 @@ set -e
 set -x
 
 # Check for existing installation
-INSTALL_PREFIX=${INSTALL_PREFIX:-"/root/.local"}
+INSTALL_PREFIX=${INSTALL_PREFIX:-"/usr/local"}
 INSTALL_PREFIX_DEPTH=$(echo $INSTALL_PREFIX | awk -F"/" '{print NF-1}')
 PROJECT_NAME=${PROJECT_NAME:-"fem-on-kaggle"}
 SHARE_PREFIX="$INSTALL_PREFIX/share/$PROJECT_NAME"
@@ -16,7 +16,7 @@ MOCK_INSTALLED="$SHARE_PREFIX/mock.installed"
 
 if [[ ! -f $MOCK_INSTALLED ]]; then
     # Download and uncompress library archive
-    MOCK_ARCHIVE_PATH=${MOCK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mock-20241207-015338-efee088/mock-install.tar.gz"}
+    MOCK_ARCHIVE_PATH=${MOCK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/mock-20250108-162945-08f3bdf/mock-install.tar.gz"}
     [[ $MOCK_ARCHIVE_PATH == http* ]] && MOCK_ARCHIVE_DOWNLOAD=${MOCK_ARCHIVE_PATH} && MOCK_ARCHIVE_PATH=/tmp/mock-install.tar.gz && wget ${MOCK_ARCHIVE_DOWNLOAD} -O ${MOCK_ARCHIVE_PATH}
     if [[ $MOCK_ARCHIVE_PATH != skip ]]; then
         rm -rf /usr/lib/python*/*-packages/mock*
