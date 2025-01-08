@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2024 by the FEM on Colab authors
+# Copyright (C) 2021-2025 by the FEM on Colab authors
 #
 # This file is part of FEM on Colab.
 #
@@ -8,7 +8,7 @@ set -e
 set -x
 
 # Check for existing installation
-INSTALL_PREFIX=${INSTALL_PREFIX:-"/root/.local"}
+INSTALL_PREFIX=${INSTALL_PREFIX:-"/usr/local"}
 INSTALL_PREFIX_DEPTH=$(echo $INSTALL_PREFIX | awk -F"/" '{print NF-1}')
 PROJECT_NAME=${PROJECT_NAME:-"fem-on-kaggle"}
 SHARE_PREFIX="$INSTALL_PREFIX/share/$PROJECT_NAME"
@@ -28,7 +28,7 @@ fi
 
 if [[ ! -f $GCC_INSTALLED ]]; then
     # Download and uncompress library archive
-    GCC_ARCHIVE_PATH=${GCC_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gcc-20241013-093906-efee088/gcc-install.tar.gz"}
+    GCC_ARCHIVE_PATH=${GCC_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/gcc-20250108-133421-08f3bdf/gcc-install.tar.gz"}
     [[ $GCC_ARCHIVE_PATH == http* ]] && GCC_ARCHIVE_DOWNLOAD=${GCC_ARCHIVE_PATH} && GCC_ARCHIVE_PATH=/tmp/gcc-install.tar.gz && wget ${GCC_ARCHIVE_DOWNLOAD} -O ${GCC_ARCHIVE_PATH}
     if [[ $GCC_ARCHIVE_PATH != skip ]]; then
         tar -xzf $GCC_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
