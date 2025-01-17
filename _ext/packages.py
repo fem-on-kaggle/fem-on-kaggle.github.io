@@ -30,7 +30,6 @@ except ImportError:
         "installation_suffixes": ["real", "complex"],
         "tests": {
             "dolfinx": "fenicsx/test-dolfinx.ipynb",
-            "multiphenicsx (with plotly)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/01_block_poisson/tutorial_block_poisson.ipynb",
             "multiphenicsx (with pyvista)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb"
         },
     },
