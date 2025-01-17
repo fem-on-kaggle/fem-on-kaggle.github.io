@@ -11,7 +11,6 @@ https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-k
 ===================
 ----- fenicsx -----
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/fenicsx/test-dolfinx.ipynb
-https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/01_block_poisson/tutorial_block_poisson.ipynb
 https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb
 ===================
 
