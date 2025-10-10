@@ -26,12 +26,12 @@ if [[ ! -f $NGSOLVE_INSTALLED ]]; then
     source $PYBIND11_INSTALL_SCRIPT_PATH
 
     # Install slepc4py (and its dependencies)
-    SLEPC4PY_INSTALL_SCRIPT_PATH=${SLEPC4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/a1b1032/releases/slepc4py-install-release-complex.sh"}
+    SLEPC4PY_INSTALL_SCRIPT_PATH=${SLEPC4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/8dae41e/releases/slepc4py-install-release-complex.sh"}
     [[ $SLEPC4PY_INSTALL_SCRIPT_PATH == http* ]] && SLEPC4PY_INSTALL_SCRIPT_DOWNLOAD=${SLEPC4PY_INSTALL_SCRIPT_PATH} && SLEPC4PY_INSTALL_SCRIPT_PATH=/tmp/slepc4py-install.sh && [[ ! -f ${SLEPC4PY_INSTALL_SCRIPT_PATH} ]] && wget ${SLEPC4PY_INSTALL_SCRIPT_DOWNLOAD} -O ${SLEPC4PY_INSTALL_SCRIPT_PATH}
     source $SLEPC4PY_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    NGSOLVE_ARCHIVE_PATH=${NGSOLVE_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/ngsolve-20251004-083651-8da0386-release-complex/ngsolve-install.tar.gz"}
+    NGSOLVE_ARCHIVE_PATH=${NGSOLVE_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/ngsolve-20251010-120835-8da0386-release-complex/ngsolve-install.tar.gz"}
     [[ $NGSOLVE_ARCHIVE_PATH == http* ]] && NGSOLVE_ARCHIVE_DOWNLOAD=${NGSOLVE_ARCHIVE_PATH} && NGSOLVE_ARCHIVE_PATH=/tmp/ngsolve-install.tar.gz && wget ${NGSOLVE_ARCHIVE_DOWNLOAD} -O ${NGSOLVE_ARCHIVE_PATH}
     if [[ $NGSOLVE_ARCHIVE_PATH != skip ]]; then
         tar -xzf $NGSOLVE_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
