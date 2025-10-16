@@ -1,2 +1,2 @@
-issues = [6]
+issues = []
 # issues = []  # default
