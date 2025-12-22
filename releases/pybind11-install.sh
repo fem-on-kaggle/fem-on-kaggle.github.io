@@ -16,12 +16,12 @@ PYBIND11_INSTALLED="$SHARE_PREFIX/pybind11.installed"
 
 if [[ ! -f $PYBIND11_INSTALLED ]]; then
     # Install mpi4py
-    MPI4PY_INSTALL_SCRIPT_PATH=${MPI4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/a1f1d95/releases/mpi4py-install.sh"}
+    MPI4PY_INSTALL_SCRIPT_PATH=${MPI4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/77ff39f8/releases/mpi4py-install.sh"}
     [[ $MPI4PY_INSTALL_SCRIPT_PATH == http* ]] && MPI4PY_INSTALL_SCRIPT_DOWNLOAD=${MPI4PY_INSTALL_SCRIPT_PATH} && MPI4PY_INSTALL_SCRIPT_PATH=/tmp/mpi4py-install.sh && [[ ! -f ${MPI4PY_INSTALL_SCRIPT_PATH} ]] && wget ${MPI4PY_INSTALL_SCRIPT_DOWNLOAD} -O ${MPI4PY_INSTALL_SCRIPT_PATH}
     source $MPI4PY_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    PYBIND11_ARCHIVE_PATH=${PYBIND11_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/pybind11-20251101-031636-8da0386/pybind11-install.tar.gz"}
+    PYBIND11_ARCHIVE_PATH=${PYBIND11_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/pybind11-20251222-150925-c7e790c/pybind11-install.tar.gz"}
     [[ $PYBIND11_ARCHIVE_PATH == http* ]] && PYBIND11_ARCHIVE_DOWNLOAD=${PYBIND11_ARCHIVE_PATH} && PYBIND11_ARCHIVE_PATH=/tmp/pybind11-install.tar.gz && wget ${PYBIND11_ARCHIVE_DOWNLOAD} -O ${PYBIND11_ARCHIVE_PATH}
     if [[ $PYBIND11_ARCHIVE_PATH != skip ]]; then
         rm -rf /usr/lib/python*/*-packages/pybind11*
