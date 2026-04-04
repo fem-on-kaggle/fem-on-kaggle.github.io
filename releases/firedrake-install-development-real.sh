@@ -16,27 +16,27 @@ FIREDRAKE_INSTALLED="$SHARE_PREFIX/firedrake.installed"
 
 if [[ ! -f $FIREDRAKE_INSTALLED ]]; then
     # Install pybind11
-    PYBIND11_INSTALL_SCRIPT_PATH=${PYBIND11_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/c674335c/releases/pybind11-install.sh"}
+    PYBIND11_INSTALL_SCRIPT_PATH=${PYBIND11_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/fa37c0e8/releases/pybind11-install.sh"}
     [[ $PYBIND11_INSTALL_SCRIPT_PATH == http* ]] && PYBIND11_INSTALL_SCRIPT_DOWNLOAD=${PYBIND11_INSTALL_SCRIPT_PATH} && PYBIND11_INSTALL_SCRIPT_PATH=/tmp/pybind11-install.sh && [[ ! -f ${PYBIND11_INSTALL_SCRIPT_PATH} ]] && wget ${PYBIND11_INSTALL_SCRIPT_DOWNLOAD} -O ${PYBIND11_INSTALL_SCRIPT_PATH}
     source $PYBIND11_INSTALL_SCRIPT_PATH
 
     # Install boost (and its dependencies)
-    BOOST_INSTALL_SCRIPT_PATH=${BOOST_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/5bb452ac/releases/boost-install.sh"}
+    BOOST_INSTALL_SCRIPT_PATH=${BOOST_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/61776e75/releases/boost-install.sh"}
     [[ $BOOST_INSTALL_SCRIPT_PATH == http* ]] && BOOST_INSTALL_SCRIPT_DOWNLOAD=${BOOST_INSTALL_SCRIPT_PATH} && BOOST_INSTALL_SCRIPT_PATH=/tmp/boost-install.sh && [[ ! -f ${BOOST_INSTALL_SCRIPT_PATH} ]] && wget ${BOOST_INSTALL_SCRIPT_DOWNLOAD} -O ${BOOST_INSTALL_SCRIPT_PATH}
     source $BOOST_INSTALL_SCRIPT_PATH
 
     # Install slepc4py (and its dependencies)
-    SLEPC4PY_INSTALL_SCRIPT_PATH=${SLEPC4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/40d5040b/releases/slepc4py-install-development-real.sh"}
+    SLEPC4PY_INSTALL_SCRIPT_PATH=${SLEPC4PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/e9440625/releases/slepc4py-install-development-real.sh"}
     [[ $SLEPC4PY_INSTALL_SCRIPT_PATH == http* ]] && SLEPC4PY_INSTALL_SCRIPT_DOWNLOAD=${SLEPC4PY_INSTALL_SCRIPT_PATH} && SLEPC4PY_INSTALL_SCRIPT_PATH=/tmp/slepc4py-install.sh && [[ ! -f ${SLEPC4PY_INSTALL_SCRIPT_PATH} ]] && wget ${SLEPC4PY_INSTALL_SCRIPT_DOWNLOAD} -O ${SLEPC4PY_INSTALL_SCRIPT_PATH}
     source $SLEPC4PY_INSTALL_SCRIPT_PATH
 
     # Install vtk
-    VTK_INSTALL_SCRIPT_PATH=${VTK_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/dc9d6cb1/releases/vtk-install.sh"}
+    VTK_INSTALL_SCRIPT_PATH=${VTK_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/4668dd36/releases/vtk-install.sh"}
     [[ $VTK_INSTALL_SCRIPT_PATH == http* ]] && VTK_INSTALL_SCRIPT_DOWNLOAD=${VTK_INSTALL_SCRIPT_PATH} && VTK_INSTALL_SCRIPT_PATH=/tmp/vtk-install.sh && [[ ! -f ${VTK_INSTALL_SCRIPT_PATH} ]] && wget ${VTK_INSTALL_SCRIPT_DOWNLOAD} -O ${VTK_INSTALL_SCRIPT_PATH}
     source $VTK_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    FIREDRAKE_ARCHIVE_PATH=${FIREDRAKE_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/firedrake-20260321-010500-8314627-development-real/firedrake-install.tar.gz"}
+    FIREDRAKE_ARCHIVE_PATH=${FIREDRAKE_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/firedrake-20260404-011217-8314627-development-real/firedrake-install.tar.gz"}
     [[ $FIREDRAKE_ARCHIVE_PATH == http* ]] && FIREDRAKE_ARCHIVE_DOWNLOAD=${FIREDRAKE_ARCHIVE_PATH} && FIREDRAKE_ARCHIVE_PATH=/tmp/firedrake-install.tar.gz && wget ${FIREDRAKE_ARCHIVE_DOWNLOAD} -O ${FIREDRAKE_ARCHIVE_PATH}
     if [[ $FIREDRAKE_ARCHIVE_PATH != skip ]]; then
         rm -rf /usr/lib/python*/*-packages/Cython*
