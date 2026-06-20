@@ -21,7 +21,7 @@ if [[ ! -f $VTK_INSTALLED ]]; then
     source $H5PY_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    VTK_ARCHIVE_PATH=${VTK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/vtk-20260601-051709-da6e593/vtk-install.tar.gz"}
+    VTK_ARCHIVE_PATH=${VTK_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/vtk-20260620-064725-b3e0842/vtk-install.tar.gz"}
     [[ $VTK_ARCHIVE_PATH == http* ]] && VTK_ARCHIVE_DOWNLOAD=${VTK_ARCHIVE_PATH} && VTK_ARCHIVE_PATH=/tmp/vtk-install.tar.gz && wget ${VTK_ARCHIVE_DOWNLOAD} -O ${VTK_ARCHIVE_PATH}
     if [[ $VTK_ARCHIVE_PATH != skip ]]; then
         tar -xzf $VTK_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
