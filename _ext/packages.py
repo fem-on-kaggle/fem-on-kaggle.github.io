@@ -30,7 +30,7 @@ except ImportError:
         "installation_suffixes": ["release-real", "release-complex", "development-real", "development-complex"],
         "tests": {
             "dolfinx": "fenicsx/test-dolfinx.ipynb",
-            "multiphenicsx (with pyvista)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle-multiphenicsx/tutorials/03_lagrange_multipliers/tutorial_lagrange_multipliers_interface.ipynb"
+            "multiphenicsx (with pyvista)": "https://kaggle.com/kernels/welcome?src=https://github.com/multiphenics/multiphenics.github.io/blob/open-in-kaggle/tutorials/01_lagrange_multipliers/tutorial_3_lagrange_multipliers_interface.ipynb"
         },
     },
     "firedrake": {
