@@ -3,11 +3,6 @@
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/boost/test.ipynb
 =================
 
-===============
------ gcc -----
-https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/gcc/test.ipynb
-===============
-
 ================
 ----- h5py -----
 https://kaggle.com/kernels/welcome?src=https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/blob/gh-pages/tests/h5py/test.ipynb
