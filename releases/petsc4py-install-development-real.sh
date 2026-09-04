@@ -15,13 +15,13 @@ SHARE_PREFIX="$INSTALL_PREFIX/share/$PROJECT_NAME"
 PETSC4PY_INSTALLED="$SHARE_PREFIX/petsc4py.installed"
 
 if [[ ! -f $PETSC4PY_INSTALLED ]]; then
-    # Install h5py (and its dependencies, most notably gcc and mpi4py)
-    H5PY_INSTALL_SCRIPT_PATH=${H5PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/1ee613e7/releases/h5py-install.sh"}
+    # Install h5py (and its dependencies, most notably mpi4py)
+    H5PY_INSTALL_SCRIPT_PATH=${H5PY_INSTALL_SCRIPT_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle.github.io/raw/380d5b00/releases/h5py-install.sh"}
     [[ $H5PY_INSTALL_SCRIPT_PATH == http* ]] && H5PY_INSTALL_SCRIPT_DOWNLOAD=${H5PY_INSTALL_SCRIPT_PATH} && H5PY_INSTALL_SCRIPT_PATH=/tmp/h5py-install.sh && [[ ! -f ${H5PY_INSTALL_SCRIPT_PATH} ]] && wget ${H5PY_INSTALL_SCRIPT_DOWNLOAD} -O ${H5PY_INSTALL_SCRIPT_PATH}
     source $H5PY_INSTALL_SCRIPT_PATH
 
     # Download and uncompress library archive
-    PETSC4PY_ARCHIVE_PATH=${PETSC4PY_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/petsc4py-20260901-045945-2da8e4f-development-real/petsc4py-install.tar.gz"}
+    PETSC4PY_ARCHIVE_PATH=${PETSC4PY_ARCHIVE_PATH:-"https://github.com/fem-on-kaggle/fem-on-kaggle/releases/download/petsc4py-20260904-152540-45f2129-development-real/petsc4py-install.tar.gz"}
     [[ $PETSC4PY_ARCHIVE_PATH == http* ]] && PETSC4PY_ARCHIVE_DOWNLOAD=${PETSC4PY_ARCHIVE_PATH} && PETSC4PY_ARCHIVE_PATH=/tmp/petsc4py-install.tar.gz && wget ${PETSC4PY_ARCHIVE_DOWNLOAD} -O ${PETSC4PY_ARCHIVE_PATH}
     if [[ $PETSC4PY_ARCHIVE_PATH != skip ]]; then
         tar -xzf $PETSC4PY_ARCHIVE_PATH --strip-components=$INSTALL_PREFIX_DEPTH --directory=$INSTALL_PREFIX
