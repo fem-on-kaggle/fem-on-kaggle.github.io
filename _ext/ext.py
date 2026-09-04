@@ -203,8 +203,6 @@ For convenience, text files containing links to all <b>FEM on Kaggle</b> tests c
             logo = "_static/images/fenics-logo.png"
         elif library in ("firedrake", "fireshape", "irksome", "ROL"):
             logo = "_static/images/firedrake-logo.png"
-        elif library == "gcc":
-            logo = "_static/images/gcc-logo.png"
         elif library == "gmsh":
             logo = "_static/images/gmsh-logo.png"
         elif library == "h5py":
@@ -381,6 +379,17 @@ def on_build_finished(app, exc):
                     test_notebook = os.path.join(tests_dir, test_notebook_name)
                     assert test_notebook not in all_packages_files, f"Could not find {test_notebook}"
                     all_packages_files[test_notebook] = test_notebook_git
+        # Get staging package installation scripts and test notebooks from git.
+        # Staging may be only partially populated, so restore every staging file
+        # that already exists on gh-pages rather than requiring the full package set.
+        staging_files = subprocess.run(
+            "git ls-tree -r --name-only origin/gh-pages -- releases-staging tests-staging",
+            shell=True, capture_output=True, check=True)
+        for staging_file_git in staging_files.stdout.decode().splitlines():
+            staging_file = os.path.join(app.outdir, staging_file_git)
+            assert staging_file not in all_packages_files, (
+                f"Duplicate package file {staging_file}")
+            all_packages_files[staging_file] = staging_file_git
         for (package_file, package_file_git) in all_packages_files.items():
             os.makedirs(os.path.dirname(package_file), exist_ok=True)
             copy_file = subprocess.run(
